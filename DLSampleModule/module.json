@@ -1,0 +1,45 @@
+{
+  "name": "My custom module using a dynamic library",
+  "type": "Empty",
+  "path": "Custom",
+  "version": "1.0.0",
+  "description": "My module description",
+  "url": "https://github.com/monsieurgustav/Chataigne-sample-module-dynamic-library",
+  "downloadURL": "",
+  "hasInput": true,
+  "hasOutput": true,
+  "parameters": {
+    "dynamicLibraryPath": {
+      "type": "File"
+    }
+  },
+  "scripts": [
+    "moduleScript.js"
+  ],
+  "commands": {
+    "Hello": {
+      "menu": "",
+      "callback": "helloCmd",
+      "parameters": {
+        "Value": {
+          "type": "String",
+          "default": "World"
+        }
+      }
+    },
+    "Math": {
+      "menu": "",
+      "callback": "mathCmd",
+      "parameters": {
+        "Left": {
+          "type": "Float",
+          "default": "1"
+        },
+        "Right": {
+          "type": "Float",
+          "default": "2"
+        }
+      }
+    }
+  }
+}
